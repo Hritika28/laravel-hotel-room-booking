@@ -107,7 +107,7 @@
         }
 
         .stairs {
-            width: 100px; /* or suitable fixed width */
+            width: 100px;
             text-align: center;
             border-right: 1px solid #ccc;
             padding: 5px;
@@ -154,7 +154,6 @@
         @endif
         <h1>Room Booking</h1>
         <div class="d-flex gap-2 align-items-end">
-            <!-- Book Form -->
             <form method="POST" action="{{ route('book') }}" class="mb-0">
                 @csrf
                 <div class="form-group d-flex gap-2 align-items-center">
@@ -164,13 +163,11 @@
                 </div>
             </form>
 
-            <!-- Random Rooms Form -->
             <form method="POST" action="{{ route('random') }}" class="mb-0">
                 @csrf
                 <button type="submit" class="btn btn-warning random">Book Random Rooms</button>
             </form>
 
-            <!-- Reset Form -->
             <form method="POST" action="{{ route('reset') }}" class="mb-0">
                 @csrf
                 <button type="submit" class="btn btn-danger reset">Reset All Bookings</button>
